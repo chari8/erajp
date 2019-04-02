@@ -64,3 +64,6 @@ target/
 # venv
 venv
 .python-version
+
+# vscode
+.vscode
