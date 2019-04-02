@@ -10,6 +10,7 @@ ERA_JP = (
     ("T", "大正"),
     ("S", "昭和"),
     ("H", "平成"),
+    ("R", "令和"),
 )
 
 
@@ -40,9 +41,13 @@ def strjpftime(time=datetime.datetime.today(), format="%o%E.%m.%d"):
     elif time < datetime.datetime(1989, 1, 8):
         era_year = time.year - 1925
         era, era_ch = ERA_JP[2]
-    else:
+    elif time < datetime.datetime(2019, 4, 1):
         era_year = time.year - 1988
         era, era_ch = ERA_JP[3]
+    else:
+        era_year = time.year - 2018
+        era, era_ch = ERA_JP[4]
+
     if era_year == 1 and format.find("%O") > -1:
         era_year = "元"
     else:
