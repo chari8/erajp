@@ -60,3 +60,7 @@ target/
 *.swp
 *.swo
 .idea
+
+# venv
+venv
+.python-version
