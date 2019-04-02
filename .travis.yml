@@ -1,3 +1,5 @@
+# for testing python >= 3.7, xenial is required
+dist: xenial 
 language: python
 
 python:
