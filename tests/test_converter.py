@@ -44,12 +44,12 @@ class TestConverter(TestCase):
         eq_(strjpftime(heisei_time), "H27.08.05")
         eq_(strjpftime(heisei_time, "%O%E年"), "平成27年")
 
-        first_heisei_time = datetime.datetime(1989, 1, 8)
-        eq_(strjpftime(first_heisei_time), "H1.01.08")
-        eq_(strjpftime(first_heisei_time, "%O%E年"), "平成元年")
+        last_heisei_time = datetime.datetime(2019, 4, 30)
+        eq_(strjpftime(last_heisei_time), "H31.04.30")
+        eq_(strjpftime(last_heisei_time, "%O%E年"), "平成31年")
 
-        first_reiwa_time = datetime.datetime(2019, 4, 1)
-        eq_(strjpftime(first_reiwa_time), "R1.04.01")
+        first_reiwa_time = datetime.datetime(2019, 5, 1)
+        eq_(strjpftime(first_reiwa_time), "R1.05.01")
         eq_(strjpftime(first_reiwa_time, "%O%E年"), "令和元年")
 
         reiwa_time = datetime.datetime(2020, 7, 24)

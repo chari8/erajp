@@ -41,7 +41,7 @@ def strjpftime(time=datetime.datetime.today(), format="%o%E.%m.%d"):
     elif time < datetime.datetime(1989, 1, 8):
         era_year = time.year - 1925
         era, era_ch = ERA_JP[2]
-    elif time < datetime.datetime(2019, 4, 1):
+    elif time < datetime.datetime(2019, 5, 1):
         era_year = time.year - 1988
         era, era_ch = ERA_JP[3]
     else:
